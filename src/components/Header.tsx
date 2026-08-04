@@ -42,7 +42,7 @@ export function Header() {
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-4 text-xs font-medium text-slate-300 overflow-x-auto py-2">
+        <nav className="hidden lg:flex items-center gap-4 text-xs font-medium text-slate-300 overflow-x-auto no-scrollbar [ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden py-2">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -101,6 +101,20 @@ export function Footer() {
       </div>
       <div className="max-w-7xl mx-auto px-4 mt-8 pt-6 border-t border-slate-900 text-center text-slate-500 text-[11px] font-sans">
         © 2026 NovaMind AI Labs. All rights reserved.
+      </div>
+          <div className="max-w-7xl mx-auto px-4 mt-6 pt-4 border-t border-slate-900/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-500 text-[11px]">
+        <div>© 2026 All rights reserved.</div>
+        <div>
+          <a
+            href="https://devmaster.online"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white font-medium transition-colors cursor-pointer"
+          >
+            <span>Powered by</span>
+            <span className="font-bold text-cyan-400 hover:underline">DevMaster</span>
+          </a>
+        </div>
       </div>
     </footer>
   );

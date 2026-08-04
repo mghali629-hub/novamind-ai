@@ -9,3 +9,5 @@ prisma/*.db-journal
 .vercel
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel

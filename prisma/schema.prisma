@@ -1,0 +1,59 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model InferenceLog {
+  id        Int      @id @default(autoincrement())
+  modelName String
+  prompt    String
+  response  String
+  createdAt DateTime @default(now())
+}
+
+model AIModel {
+  id            Int    @id @default(autoincrement())
+  name          String
+  version       String
+  contextWindow String
+  tokensPerSec  String
+  description   String
+}
+
+model APIKey {
+  id        Int      @id @default(autoincrement())
+  key       String   @unique
+  userEmail String
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
+
+model UsageRecord {
+  id        Int      @id @default(autoincrement())
+  tokensIn  Int
+  tokensOut Int
+  cost      Float
+  createdAt DateTime @default(now())
+}
+
+model ResearchPaper {
+  id          Int      @id @default(autoincrement())
+  slug        String   @unique
+  title       String
+  authors     String
+  abstract    String
+  publishedAt DateTime @default(now())
+}
+
+model BlogPost {
+  id        Int      @id @default(autoincrement())
+  slug      String   @unique
+  title     String
+  author    String
+  content   String
+  createdAt DateTime @default(now())
+}

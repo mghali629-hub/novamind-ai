@@ -1,11 +1,11 @@
-﻿# 🤖 NovaMind AI — Multimodal LLM & Neural API Platform
+﻿# 🤖 NovaMind AI — AI Content Generation & Productivity SaaS Suite
 
-Developer platform for enterprise AI inference APIs, 1M context multimodal LLMs, interactive playground, token billing analytics, and research papers.
+Cutting-edge AI workspace for automated content generation, copywriting, code assistant, and intelligent marketing workflows.
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 - **Framework**: Next.js 14 (App Router)
 - **Language**: TypeScript & React 18
-- **Styling**: TailwindCSS
+- **Styling**: TailwindCSS & Lucide Icons
 - **Database**: Prisma ORM & SQLite
 
 ## 🚀 Quick Start
@@ -14,6 +14,7 @@ npm install
 npx prisma db push
 npm run db:seed
 npm run dev
-``n
+`
+
 ## 📄 License
 MIT License.

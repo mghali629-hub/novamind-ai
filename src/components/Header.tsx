@@ -47,7 +47,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={	ransition-colors whitespace-nowrap py-1 \}
+              className={`transition-colors whitespace-nowrap py-1 ${pathname === link.href ? 'text-cyan-400 border-b-2 border-cyan-400 font-bold' : 'text-slate-300 hover:text-white'}`}
             >
               {link.label}
             </Link>
